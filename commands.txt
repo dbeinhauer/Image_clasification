@@ -1,0 +1,83 @@
+
+# Training execution:
+
+## Superclasses:
+
+### SVM
+./image_classification.py --classification_method=svm \
+--model_path="models/svm_super.model" \
+>"training_outputs/svm_super_train.txt"
+
+### MLP
+./image_classification.py --classification_method=mlp \
+--model_path="models/mlp_super.model" \
+>"training_outputs/mlp_super_train.txt"
+
+### Gradient Boosted Trees
+./image_classification.py --classification_method=boost \
+--model_path="models/boost_super.model" \
+>"training_outputs/boost_super_train.txt"
+
+
+## Fine classes:
+
+### SVM
+./image_classification.py --classification_method=svm \
+--fine --model_path="models/svm_fine.model" \
+>"training_outputs/svm_fine_train.txt"
+
+### MLP
+./image_classification.py --classification_method=mlp \
+--fine --model_path="models/mlp_fine.model" \
+>"training_outputs/mlp_fine_train.txt"
+
+### Gradient Boosted Trees
+./image_classification.py --classification_method=boost \
+--fine --model_path="models/boost_fine.model" \
+>"training_outputs/boost_fine_train.txt"
+
+
+
+# Predictions:
+
+## Superclasses
+
+### SVM
+./image_classification.py --classification_method=svm \
+--model_path="models/svm_super.model" --predict --plot \
+--save_plot="plots/svm_super_ROC.png" \
+>"prediction_outputs/svm_super_pred.txt"
+
+### MLP
+./image_classification.py --classification_method=mlp \
+--model_path="models/mlp_super.model" --predict --plot \
+--save_plot="plots/mlp_super_ROC.png" \
+>"prediction_outputs/mlp_super_pred.txt"
+
+### Gradient Boosted Trees
+./image_classification.py --classification_method=boost \
+--model_path="models/boost_super.model" --predict --plot \
+--save_plot="plots/boost_super_ROC.png" \
+>"prediction_outputs/boost_super_pred.txt"
+
+
+## Fine classes:
+
+### SVM
+./image_classification.py --classification_method=svm \
+--fine --model_path="models/svm_fine.model" --predict --plot \
+--save_plot="plots/svm_fine_ROC.png" \
+>"prediction_outputs/svm_fine_pred.txt"
+
+### MLP
+./image_classification.py --classification_method=mlp \
+--fine --model_path="models/mlp_fine.model" --predict --plot \
+--save_plot="plots/mlp_fine_ROC.png" \
+>"prediction_outputs/mlp_fine_pred.txt"
+
+### Gradient Boosted Trees
+./image_classification.py --classification_method=boost \
+--fine --model_path="models/boost_fine.model" --predict --plot \
+--save_plot="plots/boost_fine_ROC.png" \
+>"prediction_outputs/boost_fine_pred.txt"
+
